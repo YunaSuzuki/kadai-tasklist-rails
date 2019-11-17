@@ -19,6 +19,9 @@ class SessionsController < ApplicationController
     flash[:success] = 'ログアウトしました。'
     redirect_to controller: 'sessions', action: 'new'
   end
+
+=begin  
+  private
   
   def login(email, password)
     @user = User.find_by(email: email)
@@ -31,4 +34,5 @@ class SessionsController < ApplicationController
       return false
     end
   end
+=end
 end
